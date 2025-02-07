@@ -1,0 +1,635 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>About Us page</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Flowers Website">
+	<meta name="keywords" content="Flowers, Order, feedback">
+	<meta name="author" content="Rajwinder And Mandeep">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/favicon.jpg" sizes="16x16">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"
+		type="text/css" media="all" />
+	<style>
+		@font-face {
+			font-family: Georgia-serif;
+			src: url('../fonts/Georgia.ttf');
+		}
+
+		body {
+			/*background:#E3DEC1;*/
+			line-height: 1;
+			font-family: Georgia-serif;
+			;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.txt-rt {
+			text-align: right;
+		}
+
+		.txt-lt {
+			text-align: left;
+		}
+
+		.txt-center {
+			text-align: center;
+		}
+
+		.float-rt {
+			float: right;
+		}
+
+		.float-lt {
+			float: left;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		.pos-relative {
+			position: relative;
+		}
+
+		.pos-absolute {
+			position: absolute;
+		}
+
+		.display-block {
+			display: block;
+		}
+
+
+		/*** Header CSS  ***/
+
+		.header {
+			overflow: hidden;
+			padding-left: -90%;
+			border-bottom: 1px solid grey;
+		}
+
+		.header a,
+		.header .header-right form {			
+			color: black;
+			text-align: center;
+			text-decoration: none;
+			font-size: 18px;
+			line-height: 25px;
+			border-radius: 4px;
+			
+		}
+
+		.header a.logo {
+			font-size: 25px;
+			font-weight: bold;
+			margin-top: -30px;
+		}
+
+		.header a.logo:hover,
+		.header-right a.searchb:hover {
+			background: none;
+		}
+
+		.header a:hover {
+			background-color: #E4285A;
+			color: black;
+		}
+
+		.header a.active {
+			background-color: dodgerblue;
+			color: white;
+		}
+
+		.header-right {
+			text-align: center;
+		}
+
+
+		/*** Navigation CSS ***/
+
+		nav ul {
+			padding: 0 0 0 1px;
+		}
+
+		nav li {
+			display: inline-block;
+		}
+
+		nav li a {
+			color: #787878;
+			padding: 10px 25px;
+		}
+
+		nav li a:hover {
+			cursor: pointer;
+			color: #3d5b99;
+		}
+
+		/***** Search Bar *****/
+
+		form.searchbar input[type=text] {
+			padding: 6px;
+			border: 1px solid #787878;
+			border-radius: 5px;
+			color: #787878;
+		}
+
+		form.searchbar input[type=image] {
+			vertical-align: middle;
+		}
+
+		form.searchbar input[type=image]:hover {
+			cursor: pointer;
+		}
+
+		/****** Home Page Slider ******/
+
+		#slider {
+			position: relative;
+			width: 1500px;
+			height: 600px;
+			margin: auto;
+			overflow: hidden;
+		}
+
+		#slider-container {
+			width: 552%;
+			position: absolute;
+			animation: slider 15s infinite;
+		}
+
+		#slider-container img {
+			width: 18%;
+		}
+		
+
+
+		@keyframes slider {
+			0% {
+				left: 0%;
+			}
+
+			25% {
+				left: -100%;
+			}
+
+			50% {
+				left: -200%;
+			}
+
+			75% {
+				left: -300%;
+			}
+
+			100% {
+				left: -400%;
+			}
+		}
+
+		/*** Home Page Section CSS  ***/
+		.outer {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			justify-content: space-evenly;
+		}
+
+		.new-arrivals h1,
+		.aboutus h1 {
+			text-align: center;
+			margin: 3%;
+			color: #E4285A;
+			text-shadow: 1px 6px 3px #2C8B3F;
+			font-size: 30px;
+		}
+
+		.new-arrivals .outer {
+			position: relative;
+			margin: 0 auto;
+			max-width: 72.3077em;
+			text-align: center;
+		}
+
+		.new-arrivals .outer .box {
+			display: inline-block;
+			width: 40%;
+		}
+
+		.new-arrivals .outer .box h3,
+		.new-arrivals .outer .box h4 {
+			font-family: Georgia-serif;
+		}
+
+		.new-arrivals .box img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.aboutus {
+			position: relative;
+			margin: 0 auto;
+			max-width: 72.3077em;
+			font-family: Georgia-serif;
+		}
+
+		.aboutus p {
+			line-height: 1.7em;
+		}
+
+
+		/*** Footer CSS  ***/
+
+		footer {
+			padding-top: 1.5em;
+			margin-top: 0.5em;
+			box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+			padding-bottom: 2em;
+			background-color: whitesmoke;
+		}
+
+		.footer-nav {
+			position: relative;
+			margin: 0 auto;
+			max-width: 72.3077em;
+		}
+
+		.footer-nav .footer-box {
+			width: 23%;
+			display: inline-block;
+		}
+
+		.footer-nav ul {
+			padding: 0;
+			list-style: none;
+		}
+
+		.footer-nav ul li {
+			margin: 0 0 3px 0;
+		}
+
+		.footer-nav li a {
+			color: #787878;
+			text-decoration: none;
+			font-size: 15px;
+			line-height: 2em;
+			padding: 10px;
+		}
+
+		.footer-nav h4 {
+			margin-left: 3%
+		}
+
+		.footer-nav li a:hover {
+			cursor: pointer;
+			color: #3d9963;
+			font-weight: bold;
+
+		}
+
+		.follow-us {
+			margin-top: 15%;
+		}
+
+		.social-icons li {
+			vertical-align: top;
+			display: inline;
+		}
+
+		.fa-facebook:hover,
+		.fa-twitter:hover,
+		.fa-youtube:hover,
+		.fa-linkedin:hover,
+		.fa-github:hover {
+			cursor: pointer;
+			color: #3d5b99;
+		}
+		.container-fluid {
+			display: flex;
+			justify-content: space-evenly;
+			
+		}
+		.container-fluid img{
+			display: flex;
+			justify-content: space-evenly;
+			
+		}
+		
+			.navbar-brand i{
+				font-size: 43px;
+				color: rgb(233, 0, 0);
+				margin: 2px;
+		
+			}
+			 .navbar-brand i:hover{
+				font-size: 45px;
+				transition: all 3s;
+				color: rgb(0, 255, 21);
+
+			}
+			 .collapse li a {
+				color: red;
+				font-family: cursive;
+				font-size: 23px;
+			} 
+		 	.collapse li a:hover{
+				text-decoration: underline overline;
+			}
+			#a{
+				text-decoration: none;
+				font-weight: bold;
+			}
+			.container{
+				display: flex;
+				justify-content: space-evenly;
+				gap: 5px;
+			}
+			.container-fluid img p{
+				display: flex;
+			}
+			.home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(./images/header1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2{
+	padding-left: 46%;
+}
+.changecontent::after{
+    content: ' ';
+    color: #ffa500;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+    0%{content: "ros";}
+    10%{content: "Colendula";}
+    20%{content: "Poppy";}
+    30%{content: "Cannabis";}
+    40%{content: "Dandenlion";}
+    50%{content: "Bluebell";}
+    60%{content: "Watelily";}
+    70%{content: "Orchid";}
+    80%{content: "Tulip";}
+    90%{content: "Daisy";}
+    100%{content: "Jasmine";}
+} 
+.home .content p{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.home .content a{
+    padding: 10px;
+    background: white;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .content a:hover{
+    background: #ffa500;
+    color: white;
+}
+.logo img{
+	width: 50px;
+}
+
+	
+			
+		
+		
+
+	
+
+		@media (max-width: 768px) {
+			.rs1-wrap-input {
+				width: 100%;
+			}
+
+			footer,
+			.searchbar,
+			#slider {
+				display: none;
+			}
+
+			.header a {
+				float: none;
+				display: block;
+				text-align: center;
+			}
+
+			.header-right {
+				float: none;
+			}
+
+			@media (max-width: 576px) {
+
+				footer,
+				.searchbar,
+				#slider {
+					display: none;
+				}
+
+				.header a {
+					float: none;
+					display: block;
+					text-align: center;
+				}
+
+				.header-right {
+					float: none;
+				}
+
+				@media (max-width: 576px) {
+					.wrap-contact {
+						padding: 62px 15px 90px 15px;
+					}
+
+					.wrap-input {
+						padding: 10px 10px 9px 10px;
+					}
+
+					footer,
+					.searchbar,
+					#slider {
+						display: none;
+					}
+
+					.header a {
+						float: none;
+						display: block;
+						text-align: center;
+					}
+
+					.header-right {
+						float: none;
+					}
+				}
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+	<!--  ==== Header Section ==== -->
+	<header class="header">
+		<h2>Visit <span class="changecontent"></span></h2>
+		<a href="index.html" class="logo" ><img class="im" src="shop.png" alt="Logo"></a>
+		<nav class="navbar navbar-expand-lg mt-2" >
+			<div class="container-fluid">
+				<a href="" class="navbar-brand">
+					<i class="bi bi-bag-heart-fill"></i>
+				</a>
+				<div class="collapse navbar-collapse">
+				   <ul class="navbar-nav col-lg-12 justify-content-center ">
+						<li class="nav-item">
+							<a href="Home.html" class="nav-link active">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="About.html" class="nav-link">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="Service.html" class="nav-link">Service</a>
+						</li>
+						<li class="nav-item">
+							<a href="Contact.html" class="nav-link">Contact</a>
+						</li>           
+				   </ul>
+				</div>
+				<form class="d-flex" role="search">
+					<input type="text" class="form-control me-2" placeholder="search">
+					<button class="btn bg-danger"><a id="a" href="https://www.youtube.com/">Search</a></button>
+				</form>
+			</div>
+		</nav>
+	</header>
+	<!--  ==== About Us Section ==== --> 
+		<div class="aboutus">
+			<h1>About Us</h1>
+			 	<p>
+					Flowers and plants are always appropriate, no matter the occasion. Whether you are shopping for Mother's Day flowers for your mom or you want
+					to surprise your husband at the office with a lush bonsai plant, we have got you covered. Browse indoor plants for sale perfect for the
+					hardworking college student, bountiful bouquets filled to bursting with magnificent blooms, and designer floral arrangements you can't find
+					elsewhere. No matter the occasion our flowers and easy flower delivery will make you shine!
+				</p>
+				<p>
+					If you are gift shopping for a snack fiend, browse our gourmet baskets filled to the brim with tasty eats. Want to complement that savory
+					snack with a sweet treat? Don't forget to order a delivery of delicious dipped strawberries. Complement your gourmet gift with some gorgeous
+					blooms to sweeten the surprise. Deliver flowers today and brighten the week of a friend, family member, or special someone.
+				</p>
+				<p>
+					We know how to make a lasting impression with more than just flowers. While our stunning orchids can brighten up any living space, 
+					sometimes the occasion calls for chocolate-covered strawberries to satisfy a sweet tooth. For the more health-conscious foodies, 
+					we have thoughtfully selected fruit baskets and snack baskets, ideal for any occasion. Just like our floral arrangements, every gourmet
+					food gift is delivered with a personalized message, so your warm wishes shine through.
+				</p>			
+		</div>
+		<div class="container-fluid d-flex">
+			<div class="container d-flex mt-5 text-center ">
+				<div class="top  text-center  ">
+					<img src="fa10.jpg" alt="">
+					<p  style="border: 1px solid rosybrown; text-align: center;">80$ Discount 10%</p>
+				</div>
+				<div class=" top  text-center ">
+					<img src="fa1.jpg" alt="">
+					<p  style="border: 1px solid rosybrown; text-align: center;"><del>100$</del> Discount 10$</p>
+				</div>
+				<div class="top  text-center">
+					<img src="fa2.jpg" alt="">
+					<p  style="border: 1px solid rosybrown;text-align: center;"><del>100$</del> Discount 10$</p>
+				</div>
+				<div class="top  text-center">
+					<img src="fa3.jpg" alt="">
+					<p  style="border: 1px solid rosybrown; text-align: center;">90$ NO Discount</p>
+				</div>
+				<div class="top  text-center ">
+					<img src="fa4.jpg" alt="">
+					<p  style="border: 1px solid rosybrown;text-align: center;">60$ NO Discount</p>
+				</div>
+				<div class="top  text-center ">
+					<img src="fa5.jpg" alt="">
+					<p  style="border: 1px solid rosybrown; text-align: center;">80$ NO Discount</p>
+				</div>
+				<div class="top  text-center">
+					<img src="fa6.jpg" alt="">
+					<p  style="border: 1px solid rosybrown; text-align: center;">60$ NO Discount</p>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+	
+	<!--  ==== Footer Section ==== -->
+	<footer>
+		<div class="container-fluid footer-nav">
+			<div class="footer-box">
+				<h4>Our Company</h4>
+				<ul>
+					<li><a target="_blank" href="index.html">Home</a></li>
+					<li><a target="_blank" href="aboutus.html">About</a></li>
+					<li><a target="_blank" href="products.html">Service</a></li>
+					<li><a target="_blank" href="gallery.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="footer-box">
+				<h4>Flower Guides</h4>
+				<ul>
+					<li><a href="javascript:void(0);">Blog</a></li>
+					<li><a href="javascript:void(0);">Gift Giving Guides</a></li>
+					<li><a href="javascript:void(0);">Wedding Flower Guide</a></li>
+					<li><a href="javascript:void(0);">International Delivery</a></li>
+					<li><a href="javascript:void(0);">Floral Facts & Inspiration</a></li>
+				</ul>
+			</div>
+			<div class="footer-box">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="mailto:webmaster@example.com">Customer Service</a></li>
+					<li><a href="mailto:webmaster@example.com">Flower Guides</a></li>
+					<li><a href="mailto:webmaster@example.com">Plant Guides</a></li>
+					<li><a target="_blank" href="privacy-policy.html">Privacy Policy</a></li>
+					<li><a target="_blank" href="terms-conditions.html">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div class="footer-box">
+				<h4>Contact</h4>
+				<ul>
+					<li><a href="mailto:webmaster@example.com">flowers@gmail.com</a></li>
+					<li><a href="tel:1800.580.2913">1800.580.2913</a></li>
+
+				</ul>
+				<h4 class="follow-us">Follow us on</h4>
+				<ul class="social-icons">
+					<li><a target="_blank" href="https://www.facebook.com/" class="social-icon"> <i
+								class="fa fa-facebook"></i></a></li>
+					<li><a target="_blank" href="https://twitter.com/?lang=en" class="social-icon"> <i
+								class="fa fa-twitter"></i></a></li>
+					<li><a target="_blank" href="https://www.youtube.com/" class="social-icon"> <i
+								class="fa fa-youtube"></i></a></li>
+					<li><a target="_blank" href="https://www.linkedin.com/feed/" class="social-icon"> <i
+								class="fa fa-linkedin"></i></a></li>
+					<li><a target="_blank" href="https://github.com/" class="social-icon"> <i
+								class="fa fa-github"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

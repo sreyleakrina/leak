@@ -1,0 +1,1016 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Contact Us page</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Flowers Website">
+	<meta name="keywords" content="Flowers, Order, feedback">
+	<meta name="author" content="Rajwinder And Mandeep">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/favicon.jpg" sizes="16x16">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"
+		type="text/css" media="all" />
+	<style>
+		@font-face {
+			font-family: Georgia-serif;
+			src: url('../fonts/Georgia.ttf');
+		}
+
+		body {
+			line-height: 1;
+			font-family: Georgia-serif;
+			;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.txt-rt {
+			text-align: right;
+		}
+
+		.txt-lt {
+			text-align: left;
+		}
+
+		.txt-center {
+			text-align: center;
+		}
+
+		.float-rt {
+			float: right;
+		}
+
+		.float-lt {
+			float: left;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		.pos-relative {
+			position: relative;
+		}
+
+		.pos-absolute {
+			position: absolute;
+		}
+
+		.display-block {
+			display: block;
+		}
+
+		.header {
+			overflow: hidden;
+			padding: 20px 10px;
+			border-bottom: 1px solid grey;
+		}
+
+		.header a,
+		.header .header-right form {
+			float: left;
+			color: black;
+			text-align: center;
+			padding: 12px;
+			text-decoration: none;
+			font-size: 18px;
+			line-height: 25px;
+			border-radius: 4px;
+		}
+
+		.header a.logo {
+			font-size: 25px;
+			font-weight: bold;
+			margin-top: -30px;
+		}
+
+		.header a.logo:hover,
+		.header-right a.searchb:hover {
+			background: none;
+		}
+
+		.header a:hover {
+			background-color: #E4285A;
+			color: black;
+		}
+
+		.header a.active {
+			background-color: dodgerblue;
+			color: white;
+		}
+
+		.header-right {
+			float: right;
+		}
+
+		nav ul {
+			padding: 0 0 0 1px;
+		}
+
+		nav li {
+			display: inline-block;
+		}
+
+		nav li a {
+			color: #787878;
+			padding: 10px 25px;
+		}
+
+		nav li a:hover {
+			cursor: pointer;
+			color: #3d5b99;
+		}
+
+		form.searchbar input[type=text] {
+			padding: 6px;
+			border: 1px solid #787878;
+			border-radius: 5px;
+			color: #787878;
+		}
+
+		form.searchbar input[type=image] {
+			vertical-align: middle;
+		}
+
+		form.searchbar input[type=image]:hover {
+			cursor: pointer;
+		}
+
+		#slider {
+			position: relative;
+			width: 1500px;
+			height: 600px;
+			margin: auto;
+			overflow: hidden;
+		}
+
+		#slider-container {
+			width: 552%;
+			position: absolute;
+			animation: slider 15s infinite;
+		}
+
+		#slider-container img {
+			width: 18%;
+		}
+
+		@keyframes slider {
+			0% {
+				left: 0%;
+			}
+
+			25% {
+				left: -100%;
+			}
+
+			50% {
+				left: -200%;
+			}
+
+			75% {
+				left: -300%;
+			}
+
+			100% {
+				left: -400%;
+			}
+		}
+
+		/*** Home Page Section CSS  ***/
+		.outer {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			justify-content: space-evenly;
+		}
+
+		.new-arrivals h1,
+		.aboutus h1 {
+			text-align: center;
+			margin: 3%;
+			color: #E4285A;
+			text-shadow: 1px 6px 3px #2C8B3F;
+			font-size: 30px;
+		}
+
+		.new-arrivals .outer {
+			position: relative;
+			margin: 0 auto;
+			max-width: 72.3077em;
+			text-align: center;
+		}
+
+		.new-arrivals .outer .box {
+			display: inline-block;
+			width: 40%;
+		}
+
+		.new-arrivals .outer .box h3,
+		.new-arrivals .outer .box h4 {
+			font-family: Georgia-serif;
+		}
+
+		.new-arrivals .box img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.aboutus {
+			position: relative;
+			margin: 0 auto;
+			max-width: 72.3077em;
+			font-family: Georgia-serif;
+		}
+
+		.aboutus p {
+			line-height: 1.7em;
+		}
+
+		footer {
+			padding-top: 1.5em;
+			margin-top: 0.5em;
+			box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+			padding-bottom: 2em;
+			background-color: whitesmoke;
+		}
+
+		.footer-nav {
+			position: relative;
+			margin: 0 auto;
+			max-width: 72.3077em;
+		}
+
+		.footer-nav .footer-box {
+			width: 23%;
+			display: inline-block;
+		}
+
+		.footer-nav ul {
+			padding: 0;
+			list-style: none;
+		}
+
+		.footer-nav ul li {
+			margin: 0 0 3px 0;
+		}
+
+		.footer-nav li a {
+			color: #787878;
+			text-decoration: none;
+			font-size: 15px;
+			line-height: 2em;
+			padding: 10px;
+		}
+
+		.footer-nav h4 {
+			margin-left: 3%
+		}
+
+		.footer-nav li a:hover {
+			cursor: pointer;
+			color: #3d5b99;
+		}
+
+		.follow-us {
+			margin-top: 15%;
+		}
+
+		.social-icons li {
+			vertical-align: top;
+			display: inline;
+		}
+
+		.fa-facebook:hover,
+		.fa-twitter:hover,
+		.fa-youtube:hover,
+		.fa-linkedin:hover,
+		.fa-github:hover {
+			cursor: pointer;
+			color: #3d5b99;
+		}
+
+		.container-contact {
+			min-height: 100vh;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 15px;
+			background: #E4285A;
+
+		}
+
+		.container-contact-form-btn {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding-top: 20px;
+			width: 100%;
+		}
+
+		.wrap-contact {
+			width: 920px;
+			background: #fff;
+			border-radius: 10px;
+			overflow: hidden;
+			padding: 62px 55px 90px 55px;
+		}
+
+		.wrap-contact-form-radio {
+			width: 100%;
+			padding: 15px 25px 0 25px;
+		}
+
+		.contact-form {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.contact-form-title {
+			display: block;
+			width: 100%;
+			font-family: Georgia-serif;
+			font-size: 39px;
+			color: #333333;
+			color: #E4285A;
+			text-shadow: 1px 6px 3px #2C8B3F;
+			line-height: 1.2;
+			text-align: center;
+			padding-bottom: 59px;
+		}
+
+		.contact-form-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 20px;
+			width: 100%;
+			height: 50px;
+			background-color: #333333;
+			border-radius: 25px;
+			font-family: Georgia-serif;
+			font-size: 16px;
+			color: #fff;
+			line-height: 1.2;
+			transition: all 0.4s;
+		}
+
+		.contact-form-btn:hover {
+			background-color: #00ad5f;
+		}
+
+		.contact-form-radio {
+			padding-bottom: 5px;
+		}
+
+		.wrap-input {
+			width: 100%;
+			position: relative;
+			border: 1px solid #e6e6e6;
+			border-radius: 13px;
+			padding: 10px 30px 9px 22px;
+			margin-bottom: 20px;
+		}
+
+		.rs1-wrap-input {
+			width: 43%;
+		}
+
+		.label-input {
+			font-family: Georgia-serif;
+			font-size: 10px;
+			color: #393939;
+			line-height: 1.5;
+			text-transform: uppercase;
+		}
+
+		.input {
+			display: block;
+			width: 100%;
+			background: transparent;
+			font-family: Georgia-serif;
+			font-size: 18px;
+			color: #555555;
+			line-height: 1.2;
+			padding-right: 15px;
+		}
+
+		.red-text {
+			color: red;
+		}
+
+		.js-select2 {
+			height: 40px;
+			border: none;
+			width: 100%;
+			font-size: 18px;
+			color: #555555;
+			font-family: Georgia-serif;
+		}
+
+		input.input {
+			height: 40px;
+			border: none;
+		}
+
+		textarea.input {
+			min-height: 120px;
+			padding-top: 9px;
+			padding-bottom: 13px;
+			border: none;
+		}
+
+		.wrap-textarea {
+			margin-top: 20px;
+		}
+
+		.input:focus+.focus-input::before {
+			width: 100%;
+		}
+
+		.has-val.input+.focus-input::before {
+			width: 100%;
+		}
+
+		.input-radio:checked+.label-radio::after {
+			display: block;
+		}
+
+		.bg0 {
+			background-color: #fff;
+		}
+
+		.bg1 {
+			background-color: #f7f7f7;
+		}
+
+		iframe.contact-map {
+			border: none;
+			width: 100%;
+			height: 400px;
+		}
+
+		iframe.video-frame {
+			width: 100%;
+			height: 500px;
+		}
+
+		#map {
+			height: 425px;
+		}
+
+		.w-full {
+			position: relative;
+			border: 1px solid #e6e6e6;
+			border-radius: 13px;
+			padding: 10px 30px 9px 22px;
+			margin-bottom: 20px;
+			width: 43%;
+		}
+
+		.container {
+			padding: 15px;
+			background: #fff;
+			margin-top: 12px;
+		}
+
+		.img-column img {
+			max-width: 100%;
+		}
+
+		.product-description {
+			border-bottom: 1px solid #E1E8EE;
+			margin-bottom: 20px;
+		}
+
+		.product-description h1 {
+			font-weight: 300;
+			font-size: 30px;
+			color: #43484D;
+			letter-spacing: -2px;
+			font-family: Georgia;
+		}
+
+		.product-description p {
+			line-height: 24px;
+		}
+
+		.product-description ul {
+			line-height: 24px;
+		}
+
+		.product-description ul li {
+			list-style: circle;
+		}
+
+		.product-price {
+			display: flex;
+			align-items: center;
+		}
+
+		.product-price span {
+			font-size: 26px;
+			margin-right: 20px;
+		}
+
+		.cart-btn {
+			background-color: #333333;
+			border-radius: 6px;
+			color: #FFFFFF;
+			padding: 12px 30px;
+		}
+
+		.cart-btn:hover {
+			background-color: #00ad5f;
+		}
+
+		.read-more {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.previous-page {
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 21px;
+		}
+
+		.previous-page a {
+			color: #E4285A;
+		}
+
+		iframe {
+			width: 100%;
+		}
+
+		.gallery-wrap .column img {
+			width: 100%;
+		}
+
+		.spec {
+			background-color: #fff;
+		}
+
+		.spec table {
+			width: 100%
+		}
+
+		.spec .secHeader {
+			border-bottom: 1px dotted #2A4B78;
+			padding: 0 0 7px 10px;
+			font-size: 25px;
+			font-weight: bold;
+		}
+
+		.spec table td.label {
+			background-color: #E4285A;
+			width: 35%;
+			color: #fff;
+			padding: 7px;
+		}
+
+		.spec td {
+			padding: 3px 1px 3px 10px;
+			border-top: 1px dotted #2C8B3F;
+			border-right: 1px dotted #2C8B3F;
+			line-height: 18px;
+		}
+
+		.spec .content td {
+			font-size: 20px;
+		}
+
+		.secHeader span {
+			width: 100%;
+			text-align: center;
+			color: #E4285A;
+			text-shadow: 1px 6px 5px #2C8B3F;
+			font-size: 30px;
+		}
+
+		.spec .table-content {
+			margin-top: 10px;
+			;
+		}
+
+		.gallery-wrap {
+			width: 990px;
+			background: #E4285A;
+			margin: 0 auto;
+		}
+
+		.gallery-wrap .column img:hover {
+			transform: scale(2);
+		}
+
+		h1 {
+			text-align: center;
+			margin: 3%;
+			color: #E4285A;
+			text-shadow: 1px 6px 3px #2C8B3F;
+			font-size: 30px;
+		}
+
+		h1:hover {
+			transform: scale(2);
+		}
+
+		.row {
+			display: flex;
+		}
+
+		.column {
+			flex: 25%;
+			padding: 0 4px;
+		}
+
+		.column img {
+			margin-top: 8px;
+		}
+
+		.product {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			justify-content: space-evenly;
+		}
+
+		.product img:hover {
+			transform: scale(2);
+		}
+
+		.Products_List h1 {
+			text-align: center;
+			margin: 3%;
+			color: #E4285A;
+			text-shadow: 1px 6px 3px #2C8B3F;
+			font-size: 30px;
+		}
+
+		.Products_List h1:hover {
+			transform: scale(2);
+		}
+
+		div.product {
+			margin-left: 30px;
+			margin-top: 30px;
+			width: 300px;
+			padding: 15px;
+			display: inline-block;
+		}
+
+		div.product img,
+		.product-detail-img img {
+			width: 100%;
+		}
+
+		.flower_name,
+		.flower_price,
+		.flower_des {
+			font-family: Georgia-serif;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			color: #000;
+			margin-top: 10px;
+		}
+
+		.product-description h1 {
+			color: #E4285A;
+			text-shadow: 1px 6px 3px #2C8B3F;
+		}
+
+		.product-detail .container,
+		.spec {
+			position: relative;
+			margin: 0 auto;
+			max-width: 72.3077em;
+			margin-bottom: 4%;
+		}
+
+		.aboutus-img img {
+			width: 100%;
+		}
+
+		.aboutus-img img:hover {
+			opacity: 0.5;
+		}
+
+		.thank-you {
+			min-height: 400px;
+		}
+
+		.navbar-brand i {
+			font-size: 43px;
+			color: rgb(233, 0, 0);
+			margin: 2px;
+		}
+
+		.navbar-brand i:hover {
+			font-size: 45px;
+			transition: all 3s;
+			color: rgb(0, 255, 21);
+
+		}
+		.collapse ul li a {
+			color: red;
+			font-family: cursive;
+			font-size: 23px;
+		}
+		.collapse{
+			padding-left: 30%;
+			margin-top: 10px;
+		}	
+		.collapse li a:hover {
+			text-decoration: underline overline;
+		}
+		.container-fluid{
+			display: flex;
+			margin-top: 70px;
+		}
+		.d-flex{
+			border-radius: 20px;
+		}
+		.logo img{
+		width: 50px;
+		margin-top: 50px;
+		}
+
+		@media (max-width: 768px) {
+			.rs1-wrap-input {
+				width: 100%;
+			}
+
+			footer,
+			.searchbar,
+			#slider {
+				display: none;
+			}
+
+			.header a {
+				float: none;
+				display: block;
+				text-align: center;
+			}
+
+			.header-right {
+				float: none;
+			}
+		}
+
+		@media (max-width: 576px) {
+
+			footer,
+			.searchbar,
+			#slider {
+				display: none;
+			}
+
+			.header a {
+				float: none;
+				display: block;
+				text-align: center;
+			}
+
+			.header-right {
+				float: none;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.wrap-contact {
+				padding: 62px 15px 90px 15px;
+			}
+
+			.wrap-input {
+				padding: 10px 10px 9px 10px;
+			}
+
+			footer,
+			.searchbar,
+			#slider {
+				display: none;
+			}
+
+			.header a {
+				float: none;
+				display: block;
+				text-align: center;
+			}
+
+			.header-right {
+				float: none;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<a href="Home.html" class="logo"><img  src="shop.png" alt="Logo"></a>
+		<nav class="navbar navbar-expand-lg mt-2">
+			<div class="container-fluid">
+				<a href="" class="navbar-brand">
+					<i class="bi bi-bag-heart-fill"></i>
+				</a>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav col-lg-12 justify-content-center ">
+						<li class="nav-item">
+							<a href="Home.html" class="nav-link active">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="About.html" class="nav-link">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="Service.html" class="nav-link">Service</a>
+						</li>
+						<li class="nav-item">
+							<a href="Contact.html" class="nav-link">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="container-contact">
+			<div class="wrap-contact">
+				<form class="contact-form" method="POST" action="thankyou.html">
+					<span class="contact-form-title">
+						ONLINE ORDER FORM
+					</span>
+					<div class="wrap-input bg1 rs1-wrap-input">
+						<span class="label-input">USER NAME *</span>
+						<input class="input" type="text" name="username" placeholder="Enter Your User Name"
+							pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required autofocus>
+						<span class="red-text">For eg: rajwinder(-,_,.)18</span>
+					</div>
+					<div class="wrap-input bg1 rs1-wrap-input">
+						<span class="label-input">FULL NAME *</span>
+						<input class="input" type="text" name="fullname" placeholder="Enter Your Full Name"
+							pattern="[a-zA-Z]+" required>
+						<span class="red-text">For eg: Rajwinder</span>
+					</div>
+					<div class="wrap-input bg1 rs1-wrap-input">
+						<span class="label-input">Email *</span>
+						<input class="input" type="text" name="email" placeholder="Enter Your Enail Address"
+							pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+						<span class="red-text">For eg: lekenavy010704@gmail.com</span>
+					</div>
+					<div class="wrap-input bg1 rs1-wrap-input">
+						<span class="label-input">Phone*</span>
+						<input class="input" type="text" name="phone" placeholder="Enter Number Phone"
+							pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+						<span class="red-text">xxx-xxx-xxxx</span>
+					</div>
+					<div class="wrap-input bg1 rs1-wrap-input">
+						<span class="label-input">Number of items*</span>
+						<input class="input" type="number" name="qty" placeholder="Enter Quantity" required>
+					</div>
+					<div class="wrap-input bg1 rs1-wrap-input">
+						<span class="label-input">Delivery Locations*</span>
+						<input list="locations" class="input" name="location" placeholder="Enter the Delivery location">
+						<datalist id="locations">
+							<option value="Cambodia">
+							<option value="USA">
+							<option value="New Zealand">
+							<option value="England">
+							<option value="DUbai">
+						</datalist>
+					</div>
+					<div class="wrap-input input-select bg1">
+						<span class="label-input">Colour & style of flowers *</span>
+						<div>
+							<select class="js-select2" name="service">
+								<option>Bright & Colourful</option>
+								<option>White & Green</option>
+								<option>Pink & White</option>
+								<option>Refined & Elegant</option>
+							</select>
+						</div>
+					</div>
+					<div class="w-full">
+						<div class="wrap-contact-form-radio">
+							<span class="label-input">Flowers Types*</span>
+							<div class="contact-form-radio m-t-15">
+								<input type="checkbox" name="flowerType" value="daisies" checked="checked">
+								<label> Daisies </label>
+							</div>
+							<div class="contact-form-radio">
+								<input type="checkbox" name="flowerType" value="lilies">
+								<label> Lilies </label>
+							</div>
+							<div class="contact-form-radio">
+								<input type="checkbox" name="flowerType" value="mixed">
+								<label> Mixed Bouquets </label>
+							</div>
+							<div class="contact-form-radio">
+								<input type="checkbox" name="flowerType" value="sunflowers">
+								<label> Sunflowers </label>
+							</div>
+						</div>
+					</div>
+					<div class="w-full">
+						<div class="wrap-contact-form-radio">
+							<span class="label-input">Occasion</span>
+							<div class="contact-form-radio m-t-15">
+								<input type="radio" name="occasion" value="Birthday" checked="checked">
+								<label> Birthday </label>
+							</div>
+							<div class="contact-form-radio">
+								<input type="radio" name="occasion" value="Mothers">
+								<label> Mothers day </label>
+							</div>
+							<div class="contact-form-radio">
+								<input type="radio" name="occasion" value="Anniversary">
+								<label> Anniversary </label>
+							</div>
+							<div class="contact-form-radio">
+								<input type="radio" name="type-product" value="service">
+								<label> Congratulations </label>
+							</div>
+						</div>
+					</div>
+					<div class="wrap-input wrap-textarea validate-input bg0 rs1-alert-validate"
+						data-validate="Please Type Your Message">
+						<span class="label-input">Message</span>
+						<textarea class="input" name="message" placeholder="Your message here..."></textarea>
+					</div>
+					<div class="container-contact-form-btn">
+						<button class="contact-form-btn">
+							<span><a href="https://www.youtube.com/"> Submit </a></span>
+						</button>
+					</div>
+				</form>
+				<!--  ==== Form End ==== -->
+			</div>
+		</div>
+		<!--  ==== Google Map ==== -->
+		<iframe class="contact-map"
+			src="https://maps.google.com/maps?q=45.5440916,-73.6424363&h1=es;z=14&amp;output=embed"></iframe>
+	</main>
+	<!--  ==== Footer Section ==== -->
+	<footer>
+		<div class="footer-nav">
+			<div class="footer-box">
+				<h4>Our Company</h4>
+				<ul>
+					<li><a target="_blank" href="index.html">Home</a></li>
+					<li><a target="_blank" href="aboutus.html">About Us</a></li>
+					<li><a target="_blank" href="products.html">Shop</a></li>
+					<li><a target="_blank" href="gallery.html">Gallery</a></li>
+					<li><a target="_blank" href="contactus.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="footer-box">
+				<h4>Flower Guides</h4>
+				<ul>
+					<li><a href="javascript:void(0);">Blog</a></li>
+					<li><a href="javascript:void(0);">Gift Giving Guides</a></li>
+					<li><a href="javascript:void(0);">Wedding Flower Guide</a></li>
+					<li><a href="javascript:void(0);">International Delivery</a></li>
+					<li><a href="javascript:void(0);">Floral Facts & Inspiration</a></li>
+				</ul>
+			</div>
+			<div class="footer-box">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="mailto:webmaster@example.com">Customer Service</a></li>
+					<li><a href="mailto:webmaster@example.com">Flower Guides</a></li>
+					<li><a href="mailto:webmaster@example.com">Plant Guides</a></li>
+					<li><a target="_blank" href="privacy-policy.html">Privacy Policy</a></li>
+					<li><a target="_blank" href="terms-conditions.html">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div class="footer-box">
+				<h4>Contact</h4>
+				<ul>
+					<li><a href="mailto:webmaster@example.com">flowers@gmail.com</a></li>
+					<li><a href="tel:1800.580.2913">1800.580.2913</a></li>
+
+				</ul>
+				<h4 class="follow-us">Follow us on</h4>
+				<ul class="social-icons">
+					<li><a target="_blank" href="https://www.facebook.com/" class="social-icon"> <i
+								class="fa fa-facebook"></i></a></li>
+					<li><a target="_blank" href="https://twitter.com/?lang=en" class="social-icon"> <i
+								class="fa fa-twitter"></i></a></li>
+					<li><a target="_blank" href="https://www.youtube.com/" class="social-icon"> <i
+								class="fa fa-youtube"></i></a></li>
+					<li><a target="_blank" href="https://www.linkedin.com/feed/" class="social-icon"> <i
+								class="fa fa-linkedin"></i></a></li>
+					<li><a target="_blank" href="https://github.com/" class="social-icon"> <i
+								class="fa fa-github"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
