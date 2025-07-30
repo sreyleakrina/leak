@@ -1,0 +1,212 @@
+/* style.css (Located in htdocs/G7) */
+body {
+  font-family: 'Quicksand', 'Noto Sans Khmer', Arial, sans-serif;
+  background: linear-gradient(135deg, #fff6fb 0%, #e3f2fd 100%);
+  margin: 0;
+  min-height: 100vh;
+  color: #3d2c2e;
+}
+
+.cute-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: url('../imag/flowers-bg.png') repeat;
+  opacity: 0.04;
+  filter: blur(0px);
+}
+form::before {
+  content: 'sreyleak';
+  font-size: 38px;
+  position: absolute;
+  left: 50%;
+  top: -32px;
+  transform: translateX(-50%);
+  background: #ffe7e7;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid #ffa7a7;
+  box-shadow: 0 2px 8px rgba(255,179,71,0.08);
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #fff;
+  padding: 1.2rem 0 1.2rem 0;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 2px 12px #e1bee7;
+  margin-bottom: 2rem;
+}
+.main-nav a {
+  color: #ad1457;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+  background: #fff8fb;
+}
+.main-nav a:hover {
+  background: #fce4ec;
+  color: #6a1b9a;
+  box-shadow: 0 2px 8px #e1bee7;
+}
+
+h2 {
+  text-align: center;
+  color: #ad1457;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-family: 'Quicksand', cursive, sans-serif;
+  letter-spacing: 1px;
+}
+
+.nav {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.nav a {
+  background: #e1bee7;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  margin: 0 0.5rem;
+}
+.nav a:hover {
+  background: #ad1457;
+  color: #fff8fb;
+}
+
+form {
+  background: #fff;
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 24px #e1bee7;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  position: relative;
+}
+form label {
+  color: #6a1b9a;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+form input, form select {
+  padding: 0.7rem 1rem;
+  border-radius: 15px;
+  border: 1.5px solid #e1bee7;
+  font-size: 1rem;
+  background: #f8f8ff;
+  margin-bottom: 0.5rem;
+  outline: none;
+  transition: border 0.2s;
+  color: #3d2c2e;
+}
+form input:focus, form select:focus {
+  border: 2px solid #ad1457;
+}
+form button {
+  background: linear-gradient(90deg, #e1bee7 0%, #f8bbd0 100%);
+  color: #6a1b9a;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 0.8rem 0;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #e1bee7;
+  transition: background 0.2s, color 0.2s;
+}
+form button:hover {
+  background: #ad1457;
+  color: #fff;
+}
+form a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ad1457;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+/* Table Styling */
+table {
+  width: 98%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #e1bee7;
+  overflow: hidden;
+}
+thead {
+  background: #e1bee7;
+  color: #fff;
+}
+thead th {
+  padding: 1rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #f8bbd0;
+}
+tbody td {
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #f3e5f5;
+  font-size: 1.05rem;
+  color: #3d2c2e;
+}
+tbody tr:last-child td {
+  border-bottom: none;
+}
+tbody tr:hover {
+  background: #fce4ec;
+}
+.empty {
+  color: #ad1457;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+@media (max-width: 800px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    margin-bottom: 1.2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #e1bee7;
+    padding: 0.5rem 0;
+  }
+  td {
+    padding: 0.7rem 1rem;
+    text-align: left;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #f3e5f5;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #ad1457;
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.98rem;
+  }
+}
+
+
